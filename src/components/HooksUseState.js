@@ -1,13 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function HooksUseState() {
-  function increment() {}
-  function decrement() {}
+  const [count, setCount] = useState(0)
+  // const [name, setName] = useState('')
+
+  function increment() {
+    setCount(count + 1)
+  }
+
+  function decrement() {
+    setCount(count - 1)
+  }
   
   return (
     <div className="App-header">
       <button onClick={decrement}>-</button>
-      5
+      {count}
       <button onClick={increment}>+</button>
     </div>
   )

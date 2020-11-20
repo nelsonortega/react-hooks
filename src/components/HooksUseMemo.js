@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useMemo } from 'react'
 
 function HooksUseMemo() {
   const [number, setNumber] = useState(0)
   const [darkTheme, setDarkTheme] = useState(true)
 
-  const newNumber = getNewNumber(number)
+  const newNumber = useMemo(() => {
+    return getNewNumber(number)
+  }, [number])
 
   const theme = {
     backgroundColor: darkTheme ? '#282c34' : 'white',
