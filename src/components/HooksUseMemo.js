@@ -22,7 +22,7 @@ function HooksUseMemo() {
 
 function getNewNumber (number) {
   console.log('Getting number')
-  for (let i = 0; i <= 1000000000; i++) {}
+  for (let i = 0; i <= 1100000000; i++) {}
 
   return number * 5
 }
